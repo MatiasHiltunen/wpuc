@@ -79,7 +79,7 @@ if (isTop) {
 
     const framing = (currentPageHtml): HTMLIFrameElement => {
         const iframe = document.createElement('iframe')
-        iframe.style.cssText = `position:absolute;top:0;left:0;width:100%;height:100%;`
+        iframe.style.cssText = `position:absolute;top:0;left:0;width:100dvw;height:100dvh;border:none;`
         iframe.referrerPolicy = 'strict-origin'
         iframe.name = 'wpuc-container'
         iframe.id = 'wpuc'
@@ -119,7 +119,6 @@ if (isTop) {
 
         if (workerMessage.type === 'html' && !!workerMessage.html) {
 
-            if (workerMessage.html == null) return
 
             if (frame.hasAttribute('srcdoc')) frame.removeAttribute('srcdoc')
 
